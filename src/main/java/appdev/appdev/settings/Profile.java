@@ -2,8 +2,10 @@ package appdev.appdev.settings;
 
 import appdev.appdev.domain.Account;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class Profile {
     private String bio;
     private String url;
