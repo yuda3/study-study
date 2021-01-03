@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Entity
 @Setter
@@ -42,14 +43,20 @@ public class Account {
     @Lob @Basic(fetch = FetchType.EAGER)
     private String profileImage;
 
-    private boolean studyCreatedByEmail ;
+    private boolean studyCreatedByEmail;
 
-    private boolean studyEnrollmentResultByEmail ;
+    private boolean studyCreatedByWeb;
 
-    private boolean studyEnrollmentResultByWeb ;
+    private boolean studyEnrollmentResultByEmail;
 
-    private boolean studyUpdatedByEmail ;
+    private boolean studyEnrollmentResultByWeb;
 
-    private boolean studyUpdatedByWeb ;
+    private boolean studyUpdatedByEmail;
 
+    private boolean studyUpdatedByWeb;
+
+    public void generateEmailCheckToken() {
+
+        this.emailCheckToken = UUID.randomUUID().toString();
+    }
 }
