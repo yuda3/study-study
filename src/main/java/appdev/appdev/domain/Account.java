@@ -1,7 +1,6 @@
 package appdev.appdev.domain;
 
 import lombok.*;
-import org.apache.tomcat.jni.Local;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
