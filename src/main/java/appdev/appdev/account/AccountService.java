@@ -1,8 +1,8 @@
 package appdev.appdev.account;
 
 import appdev.appdev.domain.Account;
-import appdev.appdev.settings.Notifications;
-import appdev.appdev.settings.Profile;
+import appdev.appdev.settings.form.Notifications;
+import appdev.appdev.settings.form.Profile;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.mail.SimpleMailMessage;
@@ -97,4 +97,10 @@ public class AccountService implements UserDetailsService {
         modelMapper.map(notifications,account);
         accountRepository.save(account);
     }
+    public void updateNickname(Account account, String nickname){
+        account.setNickname(nickname);
+        accountRepository.save(account);
+        login(account);
+    }
+
 }

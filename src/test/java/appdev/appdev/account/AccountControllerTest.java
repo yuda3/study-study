@@ -49,8 +49,6 @@ class AccountControllerTest {
                 .andExpect(unauthenticated());
 
     }
-
-
     @Test
     @DisplayName("Mail-Test-noError")
     void checkEmailToken_withOut_wrong_input() throws Exception {

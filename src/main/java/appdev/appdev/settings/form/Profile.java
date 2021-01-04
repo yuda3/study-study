@@ -1,8 +1,6 @@
-package appdev.appdev.settings;
+package appdev.appdev.settings.form;
 
-import appdev.appdev.domain.Account;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Length;
 
 @Data

@@ -1,5 +1,6 @@
-package appdev.appdev.settings;
+package appdev.appdev.settings.validator;
 
+import appdev.appdev.settings.form.PasswordForm;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 
